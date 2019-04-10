@@ -3,18 +3,20 @@
 	<head>
 	<script>
 		function setHeader() {
-			console.log("setHeader FIRED");
+			console.log("setHeader FIRED from onload");
 			var headElem = document.getElementById("headerDesktop");
 			console.log("headElem: ", headElem);
 			if (headElem != null) {
+				console.log("NOT NULL");
 				headElem.style.color = "blue";
-				cssText = 'background-image: url("https://doc-10-0s-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/a8rp2j713iqdkfnk1s35239rjvg9popb/1554854400000/00520518166996276416/*/1xalTtTPTBd9XJCafDo0-ldP2afm8J06L"); background-size: 100%; background-position: bottom;'
+				cssText = 'background-image: url("https://doc-10-0s-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/0tg8uaqgkidk4vd00pm99mflocr0lv5j/1554919200000/00520518166996276416/*/1xalTtTPTBd9XJCafDo0-ldP2afm8J06L"); background-size: 100%; background-position: bottom;'
 				headElem.setAttribute("style", cssText);
+				document.getElementById("loadIndicator").setAttribute("style", cssText);
 				console.log("HEAD ELEMENT: ", headElem);
 				console.log("HEAD ELEMENT TEXT: ", headElem.innerHtml);
 			} else {
-				setTimeout(setHeader, 15);
-			}
+				setTimeout(function(){console.log("TIMEOUT");setHeader;}, 1500);
+			};
 		};
 		window.onload = setHeader;
 		document.onload = setHeader;
@@ -23,18 +25,6 @@
 	</head>
 	<body>
 		<script>
-				function setHeader() {
-			var headElem = document.getElementById("headerDesktop");
-			if (headElem) {
-				headElem.style.color = "blue";
-				cssText = 'background-image: url("https://doc-10-0s-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/a8rp2j713iqdkfnk1s35239rjvg9popb/1554854400000/00520518166996276416/*/1xalTtTPTBd9XJCafDo0-ldP2afm8J06L"); background-size: 100%; background-position: bottom;'
-				headElem.setAttribute("style", cssText);
-				console.log("HEAD ELEMENT: ", headElem);
-				console.log("HEAD ELEMENT TEXT: ", headElem.innerHtml);
-			} else {
-				setTimeout(setHeader, 15);
-			}
-			};
 		</script>
 		<div id="loadIndicator">empty text</div>
 	</body>
