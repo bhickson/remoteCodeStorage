@@ -32,8 +32,9 @@
 			} else {
 				setTimeout(setHeader, 15);
 			}
-		};
+			};
+			$("#loadIndicator").ready(setHeader());
 		</script>
-		<div>empty text</div>
+		<div id="loadIndicator">empty text</div>
 	</body>
 </html>
