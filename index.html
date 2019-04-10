@@ -4,7 +4,7 @@
 	<script>
 		function setHeader() {
 			console.log("setHeader FIRED from onload");
-			var headElem = document.getElementById("headerDesktop");
+			var headElem = document.getElementById("header");
 			console.log("headElem: ", headElem);
 			if (headElem != null) {
 				console.log("NOT NULL");
@@ -15,6 +15,7 @@
 				console.log("HEAD ELEMENT: ", headElem);
 				console.log("HEAD ELEMENT TEXT: ", headElem.innerHtml);
 			} else {
+				console.log("NULL");
 				setTimeout(function(){console.log("TIMEOUT");setHeader;}, 1500);
 			};
 		};
