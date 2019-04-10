@@ -15,7 +15,7 @@
 				setTimeout(setHeader, 15);
 			}
 		};
-		window.onload = setHeader;
+		window.onload(function() { console.log("ONLOAD FIRED");setHeader});
 		
 	</script>
 	</head>
