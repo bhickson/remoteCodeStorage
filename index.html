@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+			  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+			  crossorigin="anonymous"></script>
 	<script>
 		function setHeader() {
 			console.log("setHeader FIRED from onload");
-			var headElem = document.getElementById("header");
+			var headElem = $("#header", parent.document);//document.getElementById("header");
 			console.log("headElem: ", headElem);
 			if (headElem != null) {
 				console.log("NOT NULL");
