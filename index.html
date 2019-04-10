@@ -2,17 +2,21 @@
 <html>
 	<head>
 	<script>
+		function setHeader() {
+	    	    var headElem = document.getElementById("headerDesktop");
+                    if (headElem)) {
+                    headElem.style.color = "blue";
+                    cssText = 'background-image: url("https://doc-10-0s-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/a8rp2j713iqdkfnk1s35239rjvg9popb/1554854400000/00520518166996276416/*/1xalTtTPTBd9XJCafDo0-ldP2afm8J06L"); background-size: 100%; background-position: bottom;'
+                    headElem.setAttribute("style", cssText);
+		}
+		
 		//window.addEventListener('load', function() {
-		window.onload = function() {
-		    console.log('All assets are loaded');
-		    var headElem = document.getElementById("headerDesktop");
-		    headElem.style.color = "blue";
-		    cssText = 'background-image: url("https://doc-10-0s-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/a8rp2j713iqdkfnk1s35239rjvg9popb/1554854400000/00520518166996276416/*/1xalTtTPTBd9XJCafDo0-ldP2afm8J06L"); background-size: 100%; background-position: bottom;'
-		    headElem.setAttribute("style", cssText);
+		window.onload = setHeader;
+		    /*};
 		    console.log("HEAD ELEMENT: ", headElem);
 		    console.log("HEAD ELEMENT TEXT: ", headElem.innerHtml);
 		});
-		console.log("LOADED EXTERNAL");
+		console.log("LOADED EXTERNAL");*/
 	</script>
 	</head>
 	<body>
